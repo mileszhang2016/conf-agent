@@ -106,6 +106,15 @@ CopyFiles       = ["intent_questions.data", "mod_ai_intent.conf"]
 ConfAPI         = "/inner-api/v1/configs/mod-ai-intent"
 ConfFileName    = "intent_questions.data"
 
+# reloader for mod_ai_context
+[Reloaders.mod_ai_context]
+BFEReloadAPI    = "/reload/mod_ai_context"
+ReloadFile      = "context_rule.data"
+CopyFiles       = ["context_rule.data", "mod_ai_context.conf"]
+[[Reloaders.mod_ai_context.NormalFileTasks]]
+ConfAPI         = "/inner-api/v1/configs/ai-context-rule"
+ConfFileName    = "context_rule.data"
+
 # # reloader for tls_conf files, detail see https://www.bfe-networks.net/en_us/configuration/tls_conf/server_cert_conf.data/
 [Reloaders.tls_conf]
 CopyFiles      = ["client_ca", "client_crl", "server_cert_conf.data", "session_ticket_key.data", "tls_rule_conf.data"]
