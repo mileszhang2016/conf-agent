@@ -116,9 +116,9 @@ ConfAPI         = "/inner-api/v1/configs/ai-context-rule"
 ConfFileName    = "context_rule.data"
 
 # # reloader for tls_conf files, detail see https://www.bfe-networks.net/en_us/configuration/tls_conf/server_cert_conf.data/
-[Reloaders.tls_conf]
-CopyFiles      = ["client_ca", "client_crl", "server_cert_conf.data", "session_ticket_key.data", "tls_rule_conf.data"]
-[[Reloaders.tls_conf.ExtraFileTasks]]
-ConfAPI             = "/inner-api/v1/configs/protocol/server_cert_conf"
-ConfFileName        = "server_cert_conf.data"
-ExtraFileJSONPaths  = ["$.Config.CertConf.*.ServerCertFile", "$.Config.CertConf.*.ServerKeyFile"]
+# [Reloaders.tls_conf]
+# CopyFiles      = ["client_ca", "client_crl", "server_cert_conf.data", "session_ticket_key.data", "tls_rule_conf.data"]
+# [[Reloaders.tls_conf.ExtraFileTasks]]
+# ConfAPI             = "/inner-api/v1/configs/protocol/server_cert_conf"
+# ConfFileName        = "server_cert_conf.data"
+# ExtraFileJSONPaths  = ["$.Config.CertConf.*.ServerCertFile", "$.Config.CertConf.*.ServerKeyFile"]
